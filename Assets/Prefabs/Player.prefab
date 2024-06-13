@@ -797,6 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   con: {fileID: 6466007626417991498}
   anim: {fileID: 5894177838421675995}
+  rb: {fileID: 0}
 --- !u!1 &1087040905213751971
 GameObject:
   m_ObjectHideFlags: 0
