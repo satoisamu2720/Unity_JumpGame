@@ -42,7 +42,6 @@ public class PlayerScript : MonoBehaviour
             // 前後左右の入力（WASDキー）から、移動のためのベクトルを計算
             // Input.GetAxis("Vertical") は前後（WSキー）の入力値
             // Input.GetAxis("Horizontal") は左右（ADキー）の入力値
-            // Vector3 moveZ = cameraForward * Input.GetAxis("Vertical") * speed;  //　前後（カメラ基準）　 
             Vector3 moveX = Camera.main.transform.right * Input.GetAxis("Horizontal") * speed; // 左右（カメラ基準）
 
             // isGrounded は地面にいるかどうかを判定します
@@ -68,7 +67,7 @@ public class PlayerScript : MonoBehaviour
             }
 
             // 移動のアニメーション
-            anim.SetFloat("MoveSpeed", (moveX).magnitude);
+            anim.SetFloat("Speed", (moveX).magnitude);
 
             // プレイヤーの向きを入力の向きに変更　
             transform.LookAt(transform.position + moveX);
